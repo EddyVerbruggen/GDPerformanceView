@@ -259,12 +259,7 @@
 #pragma mark - Other Methods
 
 + (CGRect)windowFrame {
-    CGRect frame = CGRectZero;
-    UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
-    if (window) {
-        frame = CGRectMake(0.0f, 0.0f, CGRectGetWidth(window.bounds), 20.0f);
-    }
-    return frame;
+    return CGRectMake(0.0f, 0.0f, CGRectGetWidth([UIScreen mainScreen].bounds), 20.0f);
 }
 
 - (void)reportFPS:(int)fpsValue CPU:(float)cpuValue {
